@@ -1,0 +1,105 @@
+/* <!-- Este es un tipo de fuente que se puede cambiar en Google Fonts--> */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900");
+/* <!-- Este es un tipo de fuente que se puede cambiar en Google Fonts--> */
+
+
+body{
+    /* <!-- Este es un tipo de fuente que se puede cambiar--> */
+    font-family: 'Poppins', sans-serif;
+    /* <!-- Este es un tipo de fuente que se puede cambiar--> */
+    /* <!-- Manipular esto para cambiar el fondo--> */
+    background-color: #e5e5f7;
+    background-image:  radial-gradient(#1b1d38 0.5px, transparent 0.5px), radial-gradient(#1b1d38 0.5px, #e5e5f7 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
+    display: flex;
+    min-height: 100vh;
+    /* <!-- Manipular esto para cambiar el fondo--> */
+}
+
+.form{
+    background-color: #eaeaf1;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 3.5em 2em;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 /50%);
+    text-align: center;
+}
+
+.form-title{
+    font-weight: 300;
+}
+
+.container{
+    margin-top: 3em;
+    display: grid;
+    border-radius: 25px;
+    gap: 2.5em;
+}
+
+.form-group{
+    position: relative;
+    --color: #5757577e;
+}
+
+.form-input{
+    width: 100%;
+    background: none;
+    color: #0a53be;
+    font-size: 1rem;
+    padding: .6em .4em;
+    /* <!-- Manipular esto para cambiar el borde del botón--> */
+    border: none;
+    outline: none;
+    /* <!-- Manipular esto para cambiar el borde del botón--> */
+    border-bottom: 1px solid var(--color);
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-input:focus + .form-label, .form-input:not(:placeholder-shown) + .form-label{
+    transform: translateY(-12px) scale(.9);
+    transform-origin: left top;
+    color: #0d6efd;
+}
+
+.form-label{
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform .5s, color, .3s;
+}
+
+.form-submit{
+    border: none;
+    /* <!-- Manipular esto para cambiar el estilo del botón--> */
+    background: #0a58ca;
+    color: #e5e5f7;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    padding: .4em;
+    border-radius: .5em;
+    /* <!-- Manipular esto para cambiar el estilo del botón--> */
+}
+
+/* <!-- Manipular esto para cambiar el borde inferior del botón--> */
+.form-line{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    transform: scale(0);
+    transform-origin: left bottom;
+    transition: transform .4s;
+}
+
+.form-input:focus ~ .form-line,
+.form-input:not(:placeholder-shown) ~ .form-line{
+    transform: scale(1);
+}
+/* <!-- Manipular esto para cambiar el borde inferior del botón--> */
