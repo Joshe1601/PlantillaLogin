@@ -13,18 +13,22 @@ public class LoginDao extends BaseDao {
         EmpleadoDao empleadoDao = new EmpleadoDao();
 
         /*Cambiar el String según conveniencia*/
-        String sql = "SELECT * FROM trabajadores WHERE nickname = ? AND contraseniaHashed= SHA2(?,256)";
+        String sql = "SELECT * FROM Empleado WHERE dni = ?";
         /*Cambiar el String según conveniencia*/
         try (Connection conn = this.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, nickname);
-            pstmt.setString(2, password);
 
             try(ResultSet rs = pstmt.executeQuery();){
                 if(rs.next()){
                     int idEmpleado = rs.getInt(1);
                     empleado = empleadoDao.obtenerEmpleado(idEmpleado);
+                    float validacion = (float) Float.parseFloat(empleado.getDni());
+
+                    if(validacion != Float.parseFloat(password)){
+
+                    }
                 }
             }
 

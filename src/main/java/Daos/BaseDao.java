@@ -13,8 +13,8 @@ public abstract class BaseDao {
         }
 
         String user = "root";
-        String pass = "root";
-        String url ="jdbc:mysql://127.0.0.1:3306/proyectofinal?serverTimezone=America/Lima";
+        String pass = "123456";
+        String url ="jdbc:mysql://127.0.0.1:3306/movies?serverTimezone=America/Lima";
 
         return DriverManager.getConnection(url, user, pass);
     }

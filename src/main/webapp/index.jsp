@@ -22,7 +22,9 @@
         <label for="password" class="form-label">Contraseña:</label>
         <span class="form-line"></span>
       </div>
-
+      <% if (request.getParameter("error") != null) {%>
+      <div class="form-group text-danger mb-3">Usuario o contraseña incorrectos</div>
+      <% }%>
       <button type="submit" class="form-submit">Ingresar</button>
     </div>
   </form>
